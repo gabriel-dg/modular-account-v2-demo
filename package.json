@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@aa-sdk/core": "^4.17.0",
+    "@account-kit/core": "^4.17.0",
+    "@account-kit/infra": "^4.17.0",
+    "@account-kit/smart-contracts": "^4.17.0",
+    "dotenv": "^16.4.7",
+    "viem": "2.20.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

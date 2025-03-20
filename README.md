@@ -1,6 +1,6 @@
 # Modular Account V2 Demo
 
-This repository demonstrates how to use [Alchemy's](https://www.alchemy.com/) [Modular Account V2](https://accountkit.alchemy.com/guides/modular-account/) for Ethereum Account Abstraction.
+This repository demonstrates how to use [Alchemy's](https://www.alchemy.com/) [Modular Account V2](https://accountkit.alchemy.com/smart-contracts/modular-account-v2/overview) for Ethereum Account Abstraction.
 
 ## What is Account Abstraction?
 
@@ -11,7 +11,7 @@ This repository demonstrates how to use [Alchemy's](https://www.alchemy.com/) [M
 - Spending limits
 - Customizable validation logic
 
-This demo uses [Alchemy Account Kit](https://www.alchemy.com/account-kit), a comprehensive toolkit for building with Account Abstraction.
+This demo uses [Alchemy Account Kit](https://accountkit.alchemy.com/), a comprehensive toolkit for building with Account Abstraction.
 
 ## Setup
 
@@ -91,7 +91,7 @@ This script will:
 
 Modular Account V2 addresses are calculated deterministically based on:
 1. The owner/signer address (derived from your private key)
-2. The account implementation contract from [Alchemy's smart contract deployments](https://github.com/alchemyplatform/aa-sdk/blob/main/packages/contracts)
+2. The account implementation contract
 3. The initialization data
 4. A salt value (default is 0n)
 
@@ -147,10 +147,3 @@ If you encounter an error like "sender balance and deposit together is 0", it me
 3. Wait for the transaction to confirm before running `send-user-op.ts`
 
 For other issues, check the error messages which provide specific guidance on what might be wrong.
-
-## Resources
-
-- [Alchemy Account Kit Documentation](https://accountkit.alchemy.com/)
-- [Account Abstraction Overview](https://docs.alchemy.com/docs/account-abstraction-overview)
-- [Alchemy Dashboard](https://dashboard.alchemy.com)
-- [Alchemy AA-SDK GitHub Repository](https://github.com/alchemyplatform/aa-sdk) 

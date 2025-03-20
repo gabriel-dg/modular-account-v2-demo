@@ -1,15 +1,17 @@
 # Modular Account V2 Demo
 
-This repository demonstrates how to use Alchemy's Modular Account V2 for Ethereum Account Abstraction.
+This repository demonstrates how to use [Alchemy's](https://www.alchemy.com/) [Modular Account V2](https://accountkit.alchemy.com/guides/modular-account/) for Ethereum Account Abstraction.
 
 ## What is Account Abstraction?
 
-Account Abstraction enables programmable "smart accounts" that can support features like:
+[Account Abstraction](https://docs.alchemy.com/docs/account-abstraction-overview) enables programmable "smart accounts" that can support features like:
 - Social recovery
 - Multi-signature wallets
 - Session keys
 - Spending limits
 - Customizable validation logic
+
+This demo uses [Alchemy Account Kit](https://www.alchemy.com/account-kit), a comprehensive toolkit for building with Account Abstraction.
 
 ## Setup
 
@@ -68,7 +70,7 @@ This script will:
 
 1. **Set up your environment:**
    - Install dependencies with `npm install` or `yarn`
-   - Create a `.env` file with your Alchemy API key
+   - Create a `.env` file with your [Alchemy API key](https://dashboard.alchemy.com)
 
 2. **Get your account address:**
    - Run `npx tsx get-account-address.ts`
@@ -77,7 +79,7 @@ This script will:
 
 3. **Fund your account:**
    - Copy the Modular Account V2 address displayed by the script
-   - Get Sepolia ETH from a faucet like https://sepoliafaucet.com/
+   - Get Sepolia ETH from [Alchemy's Sepolia faucet](https://sepoliafaucet.com/) (requires Alchemy account)
    - Send at least 0.0001 ETH to your Modular Account address
 
 4. **Send a user operation:**
@@ -89,7 +91,7 @@ This script will:
 
 Modular Account V2 addresses are calculated deterministically based on:
 1. The owner/signer address (derived from your private key)
-2. The account implementation contract
+2. The account implementation contract from [Alchemy's smart contract deployments](https://github.com/alchemyplatform/aa-sdk/blob/main/packages/contracts)
 3. The initialization data
 4. A salt value (default is 0n)
 
@@ -141,7 +143,14 @@ const CALL_DATA = "0x";
 If you encounter an error like "sender balance and deposit together is 0", it means your account needs to be funded. Make sure to:
 
 1. Run `get-account-address.ts` first to get your account address
-2. Fund that address with Sepolia ETH
+2. Fund that address with Sepolia ETH from [Alchemy's faucet](https://sepoliafaucet.com/)
 3. Wait for the transaction to confirm before running `send-user-op.ts`
 
-For other issues, check the error messages which provide specific guidance on what might be wrong. 
+For other issues, check the error messages which provide specific guidance on what might be wrong.
+
+## Resources
+
+- [Alchemy Account Kit Documentation](https://accountkit.alchemy.com/)
+- [Account Abstraction Overview](https://docs.alchemy.com/docs/account-abstraction-overview)
+- [Alchemy Dashboard](https://dashboard.alchemy.com)
+- [Alchemy AA-SDK GitHub Repository](https://github.com/alchemyplatform/aa-sdk) 
